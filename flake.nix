@@ -10,6 +10,7 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        minimaPath = pkgs.lib.getLib pkgs.rubyPackages.minima + "/lib/ruby/gems/3.1.0/gems/minima-2.5.1/_sass";
       in
       {
         formatter = pkgs.nixpkgs-fmt;
@@ -23,17 +24,13 @@
             pkgs.rubyPackages.minima
           ];
 
-          # the following 
-          # shellHook = ''
-          #   export SASS_PATH=/home/onyr/.local/share/gem/ruby/3.1.0/gems/minima-2.5.1/_sass
-          # '';
           shellHook = ''
-            export SASS_PATH=/nix/store/vaj5fjqjncjwlmmnmiwcwjx410z7cfcz-ruby3.1-minima-2.5.1/lib/ruby/gems/3.1.0/gems/minima-2.5.1/_sass
+            export SASS_PATH=${minimaPath}
           '';
         };
 
         packages.default = pkgs.stdenv.mkDerivation {
-          name = "deltachat-pages";
+          name = "jekyll-insalgo-website";
           src = ./.;
           buildInputs = [
             pkgs.ruby
@@ -43,9 +40,10 @@
           buildPhase = ''
             jekyll build
           '';
-          installPhase = ''cp -r _site $out'';
+          installPhase = ''
+            cp -r _site $out
+          '';
         };
-        
       }
     );
 }
