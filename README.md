@@ -13,3 +13,8 @@ Well, it was actually a lot more trouble than that on NixOs. The problem here is
 ```
 export SASS_PATH=/home/onyr/.local/share/gem/ruby/3.1.0/gems/minima-2.5.1/_sass
 ```
+
+
+### TODO
++ [ ] [Continue tutorial](https://jekyllrb.com/docs/step-by-step/09-collections/)
++ [ ] Create a custom theme for the website.
