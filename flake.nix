@@ -10,7 +10,9 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        minimaPath = pkgs.lib.getLib pkgs.rubyPackages.minima + "/lib/ruby/gems/3.1.0/gems/minima-2.5.1/_sass";
+        minima = pkgs.rubyPackages.minima;
+        minimaVersion = builtins.getAttr "version" minima;
+        minimaPath = "${minima}/lib/ruby/gems/3.1.0/gems/minima-${minimaVersion}/_sass";
       in
       {
         formatter = pkgs.nixpkgs-fmt;
@@ -21,11 +23,16 @@
             pkgs.ruby
             pkgs.rubyPackages.jekyll
             pkgs.rubyPackages.jekyll-sitemap
-            pkgs.rubyPackages.minima
+            minima
           ];
 
           shellHook = ''
-            export SASS_PATH=${minimaPath}
+            if [ ! -d "${minimaPath}" ]; then
+              echo "Error: The SASS_PATH (${minimaPath}) does not exist."
+              exit 1
+            else
+              export SASS_PATH=${minimaPath}
+            fi
           '';
         };
 
