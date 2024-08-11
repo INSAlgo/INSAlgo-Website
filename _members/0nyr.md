@@ -7,8 +7,6 @@ year: 2024
 display_page: "true"
 ---
 
-L'heureux président d'INSAlgo, pour vous servir!
-
 Je suis doctorant en informatique en co-encadrement à [IMT Atlantique (Lab-STICC)](https://labsticc.fr/fr) & [INSA Lyon (Citi)](https://www.citi-lab.fr/).
 
 J'ai l'immense plaisir d'être encadré par une équipe d'encadrants de choc, à savoir :
@@ -18,6 +16,6 @@ J'ai l'immense plaisir d'être encadré par une équipe d'encadrants de choc, à
 
 En dehors de tout ça, j'aime bien voyager, randonner, peindre, écrire, explorer... 
 
-### Contacts
+### Contactes
 [GitHub](https://github.com/0nyr)
 [Linkedin](https://www.linkedin.com/in/florian-rascoussier-onyr/)

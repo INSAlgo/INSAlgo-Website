@@ -1,9 +1,9 @@
 # WARN: Don't forget to add `permalink: <link>` to the page front matter of a new navigation page
-- name: Home
+- name: INSAlgo
   link: /
-- name: About
+- name: À propos
   link: /about/
 - name: Blog
   link: /blog/
-- name: Members
+- name: Membres
   link: /members/
