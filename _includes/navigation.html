@@ -1,5 +1,12 @@
-<nav>
-    {% for item in site.data.navigation %}
+<nav class="mono nav-container">
+  <div class="nav-element">
+    <a href="{{ site.baseurl }}/">
+      <img class="logo-nav" src="{{ site.baseurl }}/assets/images/logos/logo-nav.svg" alt="INSAlgo">
+    </a>
+  </div>
+  {% for item in site.data.navigation %}
+    <div class="nav-element">
       <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}{{ item.page.title }}</a>
-    {% endfor %}
-  </nav>
+    </div>
+  {% endfor %}
+</nav>
