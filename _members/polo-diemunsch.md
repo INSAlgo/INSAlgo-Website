@@ -1,5 +1,5 @@
 ---
-short_name: polo-diemunsch
+short_name: Polo
 github_username: polo-diemunsch
 name: Polo Diemunsch
 position: vice-président

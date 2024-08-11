@@ -1,5 +1,5 @@
 ---
-short_name: Alias011
+short_name: Cédric
 github_username: Alias011
 name: Cédric de Andria
 position: secrétaire

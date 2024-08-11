@@ -16,6 +16,6 @@ J'ai l'immense plaisir d'être encadré par une équipe d'encadrants de choc, à
 
 En dehors de tout ça, j'aime bien voyager, randonner, peindre, écrire, explorer... 
 
-### Contactes
+### Contacts
 [GitHub](https://github.com/0nyr)
 [Linkedin](https://www.linkedin.com/in/florian-rascoussier-onyr/)

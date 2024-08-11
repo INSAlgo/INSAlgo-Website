@@ -1,5 +1,5 @@
 ---
-short_name: WiredMind2
+short_name: WiredMind
 github_username: WiredMind2
 name: William Michaud
 position: trésorier
