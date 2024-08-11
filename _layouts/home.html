@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+<!-- List latest 3 posts -->
+<h2>Derniers posts :</h2>
+<ul>
+  {% for post in site.posts limit:5 %}
+    <li>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    </li>
+  {% endfor %}
+</ul>
+<a href="/blog/">Voir tous les posts</a>
+

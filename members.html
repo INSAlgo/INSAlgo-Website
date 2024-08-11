@@ -1,0 +1,31 @@
+---
+layout: default
+title: Members
+permalink: /members/
+---
+<h1>Membres</h1>
+
+Cette page recense les membres d'INSAlgo, par année.
+
+{% assign years = site.members | map: 'year' | uniq | sort | reverse %}
+
+{% for year in years %}
+  <h2>{{ year }}</h2>
+  <ul>
+    {% for member in site.members %}
+      {% if member.year == year %}
+        <li>
+            <h4>
+            {% if member.display_page == "true" %}
+                <a href="{{ member.url }}">{{ member.name }}</a>
+            {% else %}
+                {{ member.name }}
+            {% endif %}
+            - <a href="https://github.com/{{ member.github_username }}">{{ member.github_username }}</a>
+            </h4>
+            <p>{{ member.position }}</p>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}
