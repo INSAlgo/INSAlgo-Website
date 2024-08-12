@@ -5,12 +5,12 @@ permalink: /members/
 ---
 <h1>Membres</h1>
 
-Cette page recense les membres d'INSAlgo, par année.
+Cette page recense les membres d'INSAlgo, par mandat.
 
 {% assign years = site.members | map: 'year' | uniq | sort | reverse %}
 
 {% for year in years %}
-  <h2>{{ year }}</h2>
+  <h2>{{ year }}/{{ year | plus:1}}</h2>
   <ul>
     {% for member in site.members %}
       {% if member.year == year %}

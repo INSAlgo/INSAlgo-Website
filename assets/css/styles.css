@@ -242,7 +242,9 @@ footer {
         flex-direction: column;
         align-content: flex-start;
         justify-content: center;
+		text-align: center;
     }
+
 }
 
 @media (min-width: 770px) {
@@ -312,7 +314,7 @@ footer {
     display: flex;
     background: var(--background);
     border-radius: 2em;
-    width: 95%;
+    /* width: 95%; */
     padding: 1em;
 }
 
