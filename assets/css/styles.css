@@ -176,6 +176,8 @@ a.current {
 }
 .logo-frontpage {
     /* align center */
+    width: 70vw;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -220,6 +222,40 @@ footer {
     padding: 0;
 }
 
+/* responsive nav, change flex to column */
+/* Change the layout when the viewport width is below 768px */
+@media (max-width: 770px) {
+    /* Navbar */
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-element {
+        margin-top: 1em;
+    }
+
+    #navbar_spacer {
+        height: 300px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 770px) {
+    #navbar_spacer {
+        height: 60px;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
 .nav-element {
     display: flex;
     justify-content: center;
@@ -241,12 +277,9 @@ footer {
     background-color: var(--background-color);
 }
 
-/* Spacers */
-.spacer {
-    height: 60px;
-    width: 100%;
-}
+/* Top Spacer */
 #navbar_spacer {
+    width: 100%;
     grid-area: navspacer;
 }
 
@@ -277,11 +310,9 @@ p {
 /* ########## Footer ########## */
 footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     background: var(--background);
     border-radius: 2em;
-    /* width: 100%; */
+    width: 95%;
     padding: 1em;
 }
 
