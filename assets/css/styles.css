@@ -1,3 +1,5 @@
+@import url("https://www.nerdfonts.com/assets/css/webfont.css");
+
 /* Regular */
 @font-face {
     font-family: 'JetBrains Mono';
@@ -109,9 +111,49 @@
     font-style: italic;
 }
 
-/* Put default font to JetBrains Sans */
+/* Theming */
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --link-color: #007bff;
+}
+
+[data-theme="dark"] {
+    --background-color: #0d1117;
+    --text-color: #c9d1d9;
+    --link-color: #58a6ff;
+}
+
+#theme-toggle-button {
+    width: 40px;
+    height: 40px;
+}
+#theme-toggle-button svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--text-color);
+}
+
+/* General */
 body {
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: 'JetBrains Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+a {
+    color: var(--link-color);
+}
+
+a.current {
+    border-bottom: 2px solid var(--link-color);
 }
 
 .mono {
@@ -132,10 +174,60 @@ body {
     width: 60%;
 }
 
+/* Grid page layout */
+header {
+    background-color: var(--container-soft-dark-color);
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    background-color: var(--container-soft-dark-color);
+    grid-area: footer;
+}
+
+#grid-body-container {
+    display: grid;
+    grid-template-columns: 5% auto auto 5%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header header header"
+        "navspacer navspacer navspacer navspacer"
+        ". main main ."
+        "footerspacer footerspacer footerspacer footerspacer"
+        "footer footer footer footer";
+}
+
 /* Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* sticky navbar */
+    max-height: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    background: var(--background);
+}
+
 .nav-element {
     width: 100px;
     margin: 0 10px;
+}
+
+/* Spacers */
+.spacer {
+    height: 60px;
+    width: 100%;
+}
+#navbar_spacer {
+    grid-area: navspacer;
 }
 
 /* Flexbox */
@@ -144,14 +236,12 @@ body {
     justify-content: center;
     align-items: center;
     margin: 1em auto;
-    width: 100%;
-    height: 100%;
 }
-.body-container {
+.content-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;&
+    align-items: flex-start;
     margin: 20px;
     width: 100%;
     height: 100%;
@@ -161,4 +251,31 @@ body {
 p {
     word-wrap: break-word;
     overflow-wrap: break-word;
+}
+
+/* ########## Footer ########## */
+footer {
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    border-radius: 2em;
+    width: 100%;
+    padding: 1em;
+}
+
+#heart { /* beating heart*/
+    display: inline-block;
+    
+}
+
+.heartBeat {
+    animation: heartBeat .25s infinite alternate;
+    -webkit-animation: heartBeat .25s infinite alternate;
+    transform-origin: center;
+    color: var(--orange);
+}
+
+@keyframes heartBeat {
+    0% {transform: scale(0.8);}
+    100% {transform: scale(1.2);}
 }

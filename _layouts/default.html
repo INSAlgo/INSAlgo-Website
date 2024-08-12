@@ -2,8 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/inner-moon.min.css">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="/assets/favicons/favicon.svg">
@@ -13,8 +15,25 @@
     {% feed_meta %}
     {% seo %}
   </head>
-  <body class="body-container">
-    {% include navigation.html %}
-    {{ content }}
+  <body id="grid-body-container">
+    <header>
+      {% include navigation.html %}
+    </header>
+
+    <div class="spacer" id="navbar_spacer"></div>
+    
+    <main class="content-container">
+      {{ content }}
+    </main>
+    
+    <footer id="general_footer">
+      <p>© {{ site.time | date: "%Y" }} - INSAlgo</p>
+      <p>Fait avec <span id="heart"><i class="nf nf-fa-heart"></i></span> à Lyon.</p>
+    </footer>
+
   </body>
+
+  <!-- Scripts -->
+  <script src="/assets/js/theme-switch.js"></script>
+  <script src="/assets/js/animations.js"></script>
 </html>
