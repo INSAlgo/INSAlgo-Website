@@ -4,6 +4,7 @@
 
 layout: home
 title: INSAlgo
+permalink: /
 ---
 
 <div id="logo-frontpage-container" class="nav-container other-bg-color">
