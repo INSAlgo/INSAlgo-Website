@@ -1,4 +1,4 @@
-<nav class="mono navbar">
+<nav class="mono navbar other-bg-color">
   <div class="nav-container">
     <div class="nav-element">
       <a href="{{ site.baseurl }}/">
@@ -8,7 +8,15 @@
 
     {% for item in site.data.navigation %}
       <div class="nav-element">
-        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}{{ item.page.title }}</a>
+        <a 
+          href="{{ item.link }}" 
+          {% if page.url == item.link %}
+            class="nav-element-bordered current"
+          {% else %}
+            class="nav-element-bordered" 
+          {% endif %}>
+          {{ item.name }}{{ item.page.title }}
+        </a>
       </div>
     {% endfor %}
 

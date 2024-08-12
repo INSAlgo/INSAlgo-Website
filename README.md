@@ -14,4 +14,17 @@ Well, it was actually a lot more trouble than that on NixOs. The problem here is
 export SASS_PATH=/home/onyr/.local/share/gem/ruby/3.1.0/gems/minima-2.5.1/_sass
 ```
 
+### Working on the website.
+
+This website is built using [Jekyll](https://jekyllrb.com/).
+
+All content on the website is written in Markdown or HTML, with a preference for Markdown which is simple. Note that if you need punctually some HTML inside your Markdown file, you can use it directly inside.
+
+For emojis, please use [NerdFont Icons](https://www.nerdfonts.com/cheat-sheet), like in the example below:
+
+```html
+I really <i class="nf nf-fa-heart"></i> <i class="nf nf-custom-vim"></i>
+```
+
+
 
