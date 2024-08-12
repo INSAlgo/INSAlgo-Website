@@ -2,6 +2,9 @@
 
 ### Install setup
 
+##### Initial setup on NixOs
+>Now, this should work directly using `nix develop`, the following describes the full initial setup.
+
 1. Install [prerequisites](https://jekyllrb.com/docs/installation/other-linux/): Ruby, and Jekyll. If using NixOs, just run `nix develop`.
 2. Install Jekyll and Bundler gem: `gem install jekyll bundler`
 3. Create a new Jekyll site using `jekyll new INSAlgo`
@@ -13,6 +16,10 @@ Well, it was actually a lot more trouble than that on NixOs. The problem here is
 ```
 export SASS_PATH=/home/onyr/.local/share/gem/ruby/3.1.0/gems/minima-2.5.1/_sass
 ```
+
+##### On other distros
+
+Check: [Requirements and install | Jekyll doc](https://jekyllrb.com/docs/installation/#requirements)
 
 ### Working on the website.
 
