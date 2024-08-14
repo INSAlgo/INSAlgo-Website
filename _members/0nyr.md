@@ -20,3 +20,4 @@ En dehors de tout ça, j'aime bien voyager, randonner, peindre, écrire, explore
 [GitHub](https://github.com/0nyr)
 [Linkedin](https://www.linkedin.com/in/florian-rascoussier-onyr/)
 [Google Scholar](https://scholar.google.com/citations?user=3YCbbfIAAAAJ&hl=en)
+[Site personnel | onyr.net](https://onyr.net/)

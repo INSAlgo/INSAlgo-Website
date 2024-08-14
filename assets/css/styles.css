@@ -168,7 +168,7 @@ a.current {
 
 /* SVG logo */
 .logo-nav {
-    width: 100px;
+    height: 39px;
 }
 
 #logo-frontpage-container {
@@ -213,18 +213,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* sticky navbar */
-    max-height: 400px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0;
 }
 
 /* responsive nav, change flex to column */
 /* Change the layout when the viewport width is below 768px */
-@media (max-width: 770px) {
+@media (max-width: 1000px) {
     /* Navbar */
     .nav-container {
         flex-direction: column;
@@ -235,7 +228,7 @@ footer {
     }
 
     #navbar_spacer {
-        height: 300px;
+        height: 0px;
     }
 
     footer {
@@ -247,9 +240,18 @@ footer {
 
 }
 
-@media (min-width: 770px) {
+@media (min-width: 1000px) {
+    .navbar {
+        /* sticky navbar */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
+    
     #navbar_spacer {
-        height: 60px;
+        height: 70px;
     }
 
     footer {
@@ -262,6 +264,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.a-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
 }
 .nav-element-bordered {
     display: flex;

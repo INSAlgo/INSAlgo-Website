@@ -1,7 +1,7 @@
 <nav class="mono navbar other-bg-color">
   <div class="nav-container">
     <div class="nav-element">
-      <a href="{{ site.baseurl }}/">
+      <a class="a-nav" href="{{ site.baseurl }}/">
         <img class="logo-nav" src="{{ site.baseurl }}/assets/images/logos/logo-nav.svg" alt="INSAlgo">
       </a>
     </div>
@@ -11,9 +11,9 @@
         <a 
           href="{{ item.link }}" 
           {% if page.url == item.link %}
-            class="nav-element-bordered current"
+            class="a-nav nav-element-bordered current"
           {% else %}
-            class="nav-element-bordered" 
+            class="a-nav nav-element-bordered" 
           {% endif %}>
           {{ item.name }}{{ item.page.title }}
         </a>
