@@ -8,6 +8,21 @@ layout: default
     {% if author %}
       - <a href="{{ author.url }}">{{ author.short_name }}</a>
     {% endif %}
+    {% if page.categories contains 'event' or page.categories contains 'session' %}
+      {% if page.categories contains 'event'%}
+        - Événement :
+      {% else %}
+        - Séance :
+      {% endif %}
+
+      {% if page.event-date %}
+        <i class="nf nf-fa-calendar"></i> {{ page.event-date }}
+      {% endif %}
+      {% if page.event-place %}
+      <i class="nf nf-fa-location_dot"></i> {{ page.event-place }}
+      {% endif %}
+    {% endif %}
 </p>
 
 {{ content }}
+
