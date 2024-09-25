@@ -176,8 +176,8 @@ a.current {
 }
 .logo-frontpage {
     /* align center */
-    width: 70vw;
-    max-width: 800px;
+    width: 60vw;
+    max-width: 500px;
     margin: 0 auto;
 }
 

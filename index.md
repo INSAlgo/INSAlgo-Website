@@ -12,3 +12,5 @@ permalink: /
 </div>
 
 Bienvenue sur le site officiel et le blog d'**INSAlgo**, l'association étudiante de l'[INSA Lyon](https://www.insa-lyon.fr/en/insa-lyon) dédiée aux sciences informatiques et aux concours de programmation. Plongez dans le monde de l'informatique avec nous ! **Rejoignez INSAlgo** !
+
+<h2><a href="https://discord.gg/45zaKNj">Rejoignez nous sur Discord!</a> <i class="nf nf-fa-discord"></i></h2>
