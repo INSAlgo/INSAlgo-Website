@@ -1,5 +1,8 @@
 ### TODO
-+ [ ] Modify the member pages.
++ [ ] Modify the member pages. Add previous years members and 'bureau'.
++ [ ] Ajout des anciens bureaux : PortailVA https://portail.asso-insa-lyon.fr/association/138/mandate/ (attention, il faut être connecté avec le compte INSAlgo). Peut-être aussi renommer la page en "Bureau", pour mieux refléter le contenu
++ [ ] Add old retired website posts: see [web.archive.org](http://web.archive.org/web/20201012004421/https://insalgo.fr/)
++ [ ] refactor members. Add subdirectories per year to facilitate additions of members.
 
 ### Monday 12th August 2024
 + Made simple dark and light themes for the website. Added a very cool theme toggle button from [toggles.dev/](https://toggles.dev/).
